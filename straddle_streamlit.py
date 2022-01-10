@@ -95,7 +95,7 @@ def main():
             api_secret = "evrckz4qfodc2n59b4nkawdksvwy2156"
             kite = KiteConnect(api_key=api_key)
             data = kite.generate_session(request_token,api_secret = api_secret)
-            st.write("Congratulations !!! You are succussfully authorized")
+            st.write("Congratulations !!! You are successfully authorized")
             # st.write(f"CMP for NIFTY : {getCMP(kite, 'NSE:NIFTY 50')}")
             # st.write(f"CMP for BANKNIFTY : {getCMP(kite, 'NSE:NIFTY BANK')}")
             st.write(f"Your trade will be taken at {trade_time} in Banknifty with {bnf_qty} qty and Nifty with {nifty_qty} qty!!!")
