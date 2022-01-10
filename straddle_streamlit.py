@@ -19,8 +19,8 @@ def getCMP(kite, tradingSymbol):
 def getCMPLogLines(kite):
     current_time = datetime.now(IST).strftime("%H:%M:%S")
     result = f"Time : {current_time} ---> "
-    result += f"Banknifty: {getCMP(kite, 'NSE:NIFTY BANK')}, "
-    result += f"Nifty: {getCMP(kite, 'NSE:NIFTY 50')}"
+    #result += f"Banknifty: {getCMP(kite, 'NSE:NIFTY BANK')}, "
+    #result += f"Nifty: {getCMP(kite, 'NSE:NIFTY 50')}"
     return result
 
 def placeOrder(kite, symbol, qty=50):
