@@ -87,12 +87,15 @@ def main():
     nifty_qty = 0
     bnf_qty = int(st.sidebar.text_input('Enter Banknifty qty','0'))
     nifty_qty = int(st.sidebar.text_input('Enter Nifty qty','0'))
-    st.write("Click on this [link](https://kite.trade/connect/login?api_key=600whbxnxb8o616h&v=3) for kite login.")
+    api_key=st.secrets["api_key"]
+    api_secret=st.secrets["api_secret"]
+    st.write("Click on this [link](https://kite.trade/connect/login?api_key="+api_key+"&v=3) for kite login.")
     request_token = st.text_input('Enter request_token:','')
+    
     if st.button("Next"):
         if bnf_qty > 0 or nifty_qty > 0:   
-            api_key = "600whbxnxb8o616h"
-            api_secret = "evrckz4qfodc2n59b4nkawdksvwy2156"
+            #api_key = "600whbxnxb8o616h"
+            #api_secret = "evrckz4qfodc2n59b4nkawdksvwy2156"
             kite = KiteConnect(api_key=api_key)
             data = kite.generate_session(request_token,api_secret = api_secret)
             st.write("Congratulations !!! You are successfully authorized")
