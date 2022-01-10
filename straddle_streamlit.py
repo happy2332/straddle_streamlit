@@ -81,6 +81,7 @@ def tradingLoop(kite, trade_time, bnf_qty, nifty_qty):
 
 
 def main():
+    st,title('Automated Intraday Straddle App')
     trade_time = st.sidebar.text_input('Enter trade time','10:55:00')    
     bnf_qty = 0
     nifty_qty = 0
